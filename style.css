@@ -1,0 +1,59 @@
+
+body {
+  background-color: lightblue;
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 30px;
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+form input#amount {
+  width: 300px;
+  height: 100px;
+  border: 2px solid pink;
+  border-radius: 10px;
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 24px;
+  text-align: center;
+}
+
+form select {
+  width: 100px;
+  height: 50px;
+  border: 2px solid pink;
+  border-radius: 10px;
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 20px;
+  margin: 20px auto 20px auto;
+}
+
+form p#convert {
+  margin: auto;
+}
+
+p button#btn {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: pink;
+  width: 100px;
+  height: 50px;
+}
+
+#btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+p#result {
+  margin: auto;
+}
