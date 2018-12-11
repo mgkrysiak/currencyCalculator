@@ -39,8 +39,40 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 		showResult.textContent = result + ' ' + to;
+		return true;
 
 	}
+
+/* Form validation */
+
+	function validate(form) {
+		var from = firstCurrency.value;
+		var to = secondCurrency.value;
+		var amount = amountInput.value;
+
+		if (from == to) {
+			form.preventDefault();
+			alert('Currencies must be different');
+			return false;
+		}
+		else if (amount <= 0) {
+			form.preventDefault();
+			alert('Please input proper amount');
+			return false;
+		}
+		else if (from !== 'PLN' && to !== 'PLN') {
+			form.preventDefault();
+			alert('Choose PLN as one of options');
+			return false;
+		}
+		else if (/\D/.test(amount)) {
+			form.preventDefault();
+			alert('Please input only numbers');
+		}
+
+
+	}
+	btn.addEventListener('click', validate)
   btn.addEventListener('click', convertCurrency);
 
 });
